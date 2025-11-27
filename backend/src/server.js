@@ -14,6 +14,7 @@ const verificationRoutes = require('./routes/verification');
 const driverRoutes = require('./routes/driver');
 const shopRoutes = require('./routes/shop');
 const adminRoutes = require('./routes/admin');
+const userRoutes = require('./routes/userRoutes');
 
 // Connect to database
 connectDB();
@@ -43,6 +44,7 @@ app.use('/api/verification', verificationRoutes);
 app.use('/api/driver', driverRoutes);
 app.use('/api/shop', shopRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
